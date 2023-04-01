@@ -93,7 +93,9 @@ p {
   .flex {
     position: relative;
   }
-
+ .showcase .container{
+  padding:0;
+ }
   #nav-menu {
     position: fixed;
     /* left: 0; */
@@ -119,7 +121,10 @@ p {
   /* showcase */
 
   .showcase-image {
-    height: 40vh;
+    background-position: center;
+    left: 0;
+    height: 50vh;
+    width: 100%;
   }
   .grid {
     grid-template-columns: 1fr;
