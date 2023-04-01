@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.top-scroll a {
+  color: black;
+}
+.top-scroll i {
+  padding-top: 40px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #ddd;
+}
+p {
+  margin: 10px 0;
+}
+
+:root {
+  --primary: crimson;
+  --secondary: grey;
+  --black: #000;
+  --white: #fff;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 40px;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--white);
+  background-color: var(--black);
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+@media only screen and (max-width: 480px) {
+  /* menu */
+  .mobile {
+    display: block;
+  }
+  .right-menu {
+    display: none;
+  }
+
+  .flex {
+    position: relative;
+  }
+
+  #nav-menu {
+    position: fixed;
+    /* left: 0; */
+    left: -100%;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: start;
+    width: 100vw;
+    height: 100%;
+    top: 80px;
+    transition-duration: 0.3s;
+    padding-top: 1rem;
+    z-index: 100;
+  }
+  #nav-menu li {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .active {
+    left: 0 !important;
+  }
+  /* showcase */
+
+  .showcase-image {
+    height: 40vh;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .container {
+    overflow: hidden;
+    font-size: 1rem;
+
+    flex-direction: column;
+  }
+
+  .footer .container > * {
+    margin-top: 20px;
+  }
+  .right-footer,
+  .left-footer {
+    text-align: center;
+  }
+}
